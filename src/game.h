@@ -14,6 +14,9 @@ class Game {
            std::size_t target_frame_duration);
   int GetScore() const;
   int GetSize() const;
+  std::string GetUsername() const;
+  void SetUsername(std::string username);
+  // void SaveHighScore();
 
  private:
   Snake snake;
@@ -25,6 +28,7 @@ class Game {
   std::uniform_int_distribution<int> random_h;
 
   int score{0};
+  std::string username{"User123"};
 
   void PlaceFood();
   void Update();

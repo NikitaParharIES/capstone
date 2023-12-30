@@ -1,5 +1,6 @@
 #include "game.h"
 #include <iostream>
+//#include <fstream>
 #include "SDL.h"
 
 Game::Game(std::size_t grid_width, std::size_t grid_height)
@@ -36,7 +37,8 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
     // After every second, update the window title.
     if (frame_end - title_timestamp >= 1000) {
-      renderer.UpdateWindowTitle(score, frame_count);
+      //renderer.UpdateWindowTitle(score, frame_count);
+      renderer.UpdateWindowTitle(score, frame_count, username);
       frame_count = 0;
       title_timestamp = frame_end;
     }
@@ -85,3 +87,16 @@ void Game::Update() {
 
 int Game::GetScore() const { return score; }
 int Game::GetSize() const { return snake.size; }
+std::string Game::GetUsername() const { return username; }
+void Game::SetUsername(std::string username) {this->username = username;};
+
+// //output a text file to save highscores
+// void Game::SaveHighScore(){
+
+//   // //create text file if it does not exist
+//   // std::ofstream outfile ("HighScores.txt");
+//   // //save new users if it doesn't exist
+//   // outfile << "Highscores:" <<"\n";
+//   // //update scores if bigger
+//   // outfile.close();
+// }

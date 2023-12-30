@@ -44,3 +44,52 @@ This work is licensed under a
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+New Features Added:
+- Allow players to enter their names and save their high scores to a text file. [1]
+  input username into terminal 
+- add new type of food []
+
+
+how it meets the Rubric
+
+Loops, Functions, I/O:
+1. "The project accepts user input and processes the input.
+In addition to controlling the snake, the game can also receive new types of input from the player."
+2. "The project uses data structures and immutable variables.
+The project uses arrays or vectors and uses constant variables."
+
+Object Oriented Programming::
+3. "One or more classes are added to the project with appropriate access specifiers for class members.
+
+Classes are organized with attributes to hold data and methods to perform tasks.
+All class data members are explicitly specified as public, protected, or private.
+Member data that is subject to an invariant is hidden from the user and accessed via member methods."
+4. "Class constructors utilize member initialization lists.
+
+All class members that are set to argument values are initialized through member initialization lists."
+5. "Overloaded functions allow the same function to operate on different parameters.
+
+One function is overloaded with different signatures for the same function name."
+
+Memory Management:
+6. "The project uses move semantics to move data instead of copying it, where possible.
+
+The project relies on the move semantics, instead of copying the object."
+7. "The project uses smart pointers instead of raw pointers.
+
+The project uses at least one smart pointer: unique_ptr, shared_ptr, or weak_ptr."
+8. "The project makes use of references in function declarations.
+
+At least two variables are defined as references, or two functions use pass-by-reference in the project code."
+
+Concurrency:
+9. "A mutex or lock is used in the project.
+
+A mutex or lock (e.g. std::lock_guard or `std::unique_lock) is used to protect data that is shared across multiple threads in the project code."
+10. "A condition variable is used in the project.
+
+A std::condition_variable is used in the project code to synchronize thread execution.
+
+"
+
